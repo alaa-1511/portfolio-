@@ -34,7 +34,7 @@
     "@tailwindcss/postcss": "^4.1.17",
     "aos": "^2.3.4",
     "flowbite": "^4.0.1",
-    "ngx-cookie-service": "^21.1.0",
+    "ngx-cookie-service": "^20.1.1",
     "ngx-owl-carousel-o": "^20.0.1",
     "ngx-toastr": "^19.1.0",
     "ngx-typed-js": "^2.1.1",
