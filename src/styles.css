@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap'); */
+@import "flowbite/src/themes/default";
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+@import "primeicons/primeicons.css";
+
+
+:root {
+  --primary: #0A192F;
+}
+
+:root[data-theme='dark'],
+.dark {
+  --primary: #00ADB5;
+  
+}
+
+@theme "default" {
+  --color-primary: var(--primary);
+
+
+
+}
+.owl-nav button,
+.owl-nav button:focus,
+.owl-nav button:active {
+  background: none !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 5px !important;
+}
+
+.owl-theme .owl-nav [class*='owl-'] {
+  background: none !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+ .nav-link {
+    @apply block py-2 px-3 text-heading dark:text-gray-100 rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:hover:text-primary md:p-0 transition;
+  }

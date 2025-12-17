@@ -1,0 +1,13 @@
+
+::ng-deep .owl-stage {
+  display: flex;
+}
+::ng-deep .owl-item {
+  display: flex;
+  flex: 1 0 auto;
+  height: 100%;
+}
+
+::ng-deep .owl-item > * {
+  width: 100%;
+}

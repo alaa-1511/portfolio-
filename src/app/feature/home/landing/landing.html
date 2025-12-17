@@ -1,0 +1,992 @@
+
+ <section id="home" class="min-h-screen flex items-center justify-between relative py-10 md:py-0 bg-gray-50 dark:bg-slate-900">
+  <div class="container mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      
+      <!-- Left Content -->
+      <div    class="space-y-4 order-2 md:order-1  mt-2  md:mt-0 px-6 md:px-0">
+        
+        <!-- Welcome Badge -->
+        <span data-aos="fade-right" data-aos-duration="500" class="px-4 py-1 border border-primary rounded-full text-primary text-sm inline-block">
+          Welcome
+        </span>
+
+        <!-- Main Title -->
+        <h1 data-aos="fade-right" data-aos-duration="1000" class="text-3xl md:text-5xl font-extrabold leading-tight  text-gray-900 dark:text-primary">
+          Hi, I am <ngx-typed-js [strings]="['Ahmed Hassanien']" [loop]="true" [typeSpeed]="100" [backSpeed]="50">
+            <span class="typing text-primary  "></span>
+          </ngx-typed-js>
+          <span data-aos="fade-right" data-aos-duration="1500" class="text-gray-700   dark:text-gray-100">Full Stack Developer</span>
+        </h1>
+
+        <!-- Description -->
+        <p data-aos="fade-right" data-aos-duration="2000" class="text-gray-600 dark:text-gray-300 leading-relaxed text-sm md:text-base">
+          CEO @Spacetech | Software Engineer @Next | Full Stack .NET Developer (ASP.NET Core, Angular, React) | Entrepreneur | Instructor @ITI | Tech Mentor | Cloud & DevOps Enthusiast | Passionate about building innovative, scalable, and high-performance web solutions
+        </p>
+        
+
+        <!-- Buttons -->
+        <div data-aos="fade-right" data-aos-duration="2500" class="flex items-center gap-4">
+          <a href="#contact"       class="bg-primary  hover:bg-gray-950   text-white px-6 py-3 rounded-lg hover:bg-primary transition text-sm md:text-base cursor-pointer">
+            Contact Me
+          </a>
+
+          <a href="https://www.linkedin.com/in/ahmedhasanien/" data-aos="fade-right" data-aos-duration="2500" class="font-medium text-gray-800 dark:text-gray-100 hover:text-primary flex items-center gap-2 text-sm md:text-base">
+            View Portfolio
+            <span> <i class="pi pi-arrow-up-right"></i> </span>
+          </a>
+        </div>
+
+       
+      </div>
+
+      <!-- Right Image -->
+      <div class="relative flex items-center justify-center order-1 md:order-2 mt-15 md:mb-0">
+        <!-- Image Container for relative positioning -->
+        <div class="relative w-fit">
+            <!--  Background -->
+            <div data-aos="fade-left" data-aos-duration="500" class="w-[250px] md:w-[300px] h-[260px] md:h-[310px] bg-primary  absolute top-10 -right-0 md:top-10 md:right-0"></div>
+
+            <!-- Main Image -->
+            <img data-aos="fade-left" data-aos-duration="1000" 
+              src="/port.png"
+              class="w-[250px] md:w-[300px] h-[300px] md:h-[350px] object-cover relative z-10 rounded-md "
+            />       
+
+            <!-- Line Frame -->
+            <div data-aos="fade-left" data-aos-duration="1500" class="absolute -bottom-8 -left-9 md:-bottom-7 md:-left-8 w-[220px] md:w-[270px] h-[240px] md:h-[281px] border-4 border-gray-600 z-0 rounded-md"></div>
+        </div>
+
+        <!-- Side Icons (Hidden on mobile, visible on md+) -->
+        <div  class=" flex absolute -right-0 lg:right-10 top-1/2 -translate-y-1/2 flex-col items-center gap-4 md:mt-8 mt-9">
+            <p  class="rotate-90 text-primary text-sm whitespace-nowrap mb-8">Follow me on:</p>
+            <span class="w-[1px] h-12 bg-primary"></span>
+            <div class="flex flex-col gap-4">
+              <a href="https://www.facebook.com/ahmed.hassanien99?mibextid=ZbWKwL">
+           <i class="fa-brands fa-facebook text-lg text-primary hover:text-primary cursor-pointer transition-colors"></i>
+           </a>
+           <a href="https://www.instagram.com/ahmedmohamed7961?igsh=OWYxMW1lODYwcnN0">
+            <i class="fa-brands fa-instagram text-lg text-primary hover:text-primary cursor-pointer transition-colors"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/ahmedhasanien/">
+            <i class="fa-brands fa-linkedin text-lg text-primary hover:text-primary cursor-pointer transition-colors"></i> 
+            </a>
+            </div>
+        </div> 
+      </div> 
+
+    </div>
+  </div>
+</section> 
+
+<section #statsSection class="dark:bg-slate-900 bg-gray-50">
+    <div class="container mx-auto py-10 px-6 md:px-20">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
+        <div class="flex flex-col justify-center items-center md:border-r border-primary md:pr-4">
+    <div class="flex gap-2">
+      <div class=" flex justify-center items-center font-medium text-primary ">
+      <span class="text-3xl">{{ clientsCount }}</span>
+      <span class="text-xl"><i class="fas fa-plus"></i></span>
+      </div>
+    </div>
+    <h2 class="text-gray-600 dark:text-gray-300 text-xl " >Satisfied clients</h2>
+  </div>
+
+  <div class="flex flex-col justify-center items-center md:border-r border-primary md:px-4">
+    <div class="flex gap-2">
+      <div class=" flex justify-center items-center font-medium text-primary ">
+      <span class="text-3xl">{{ projectsCount }}</span>
+      <span class="text-xl"><i class="fas fa-plus"></i></span>
+      </div>
+    </div>
+    <h2 class="text-gray-600 dark:text-gray-300 text-xl " >Projects completed</h2>
+  </div>
+
+  <div class="flex flex-col justify-center items-center md:pl-4">
+      <div class="flex gap-2">
+      <div class=" flex justify-center items-center font-medium text-primary ">
+      <span class="text-3xl">{{ reviewsCount }}</span>
+      <span class="text-xl"><i class="fas fa-plus"></i></span>
+      </div>
+    </div>
+    <h2 class="text-gray-600 dark:text-gray-300 text-xl " >Reviews given</h2>
+  </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section  id="Skills" class="py-20 dark:bg-slate-900 bg-gray-50">
+  <div class="container mx-auto px-6 md:px-20">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      
+      <!-- Left Content -->
+      <div class="space-y-4">
+        <span data-aos="fade-right" data-aos-duration="500" class="px-4 py-1 border border-primary rounded-full text-primary text-sm inline-block font-medium">
+          My Skills
+        </span>
+        
+        <h1 data-aos="fade-right" data-aos-duration="1000" class="text-3xl md:text-5xl font-extrabold leading-tight text-gray-800 dark:text-white">
+          Why Hire Me For Your <br>
+          Next <span class="text-primary">Project</span>
+        </h1>
+
+        <p data-aos="fade-right" data-aos-duration="1500" class="text-gray-600 dark:text-gray-300 leading-relaxed text-lg">
+          I specialize in building high-performance web applications using modern technologies like .NET Core, Angular, and React.
+        </p>
+
+        <button data-aos="fade-right" data-aos-duration="2000" class="bg-primary  hover:bg-gray-950   hover:bg-gray-950   text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-300 font-medium cursor-pointer shadow-lg shadow-blue-500/30">
+          Hire Me
+        </button>
+      </div>
+      <!-- Right Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+        
+        <!-- Card 1 -->
+         <div data-aos="flip-left" data-aos-duration="500" class="space-y-6">
+        <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-700 hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+          <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-4 text-primary">
+             <img src="/icon/Vector (2).svg" alt="Visual Design" class="w-6 h-6">
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Full Stack Development</h3>
+          <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">Building scalable web solutions using C#, .NET Core, Angular, React, and SQL Server.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div data-aos="flip-left" data-aos-duration="1000" class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-700 hover:shadow-md transition-all duration-300 hover:-translate-y-1 sm:translate-y-8">
+          <div class="w-12 h-12 bg-orange-50 rounded-lg flex items-center justify-center mb-4 text-orange-500">
+             <img src="/icon/Vector (1).svg" alt="UX Research" class="w-6 h-6">
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Architecture & Concepts</h3>
+          <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">Applying SOLID principles, OOP, and Design Patterns to create maintainable, high-quality software.</p>
+        </div>
+</div>
+        <!-- Card 3 -->
+        <div data-aos="flip-left" data-aos-duration="1500" class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-700 hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+          <div class="w-12 h-12 bg-green-50 rounded-lg flex items-center justify-center mb-4 text-green-500">
+             <img src="/icon/Vector.svg" alt="Design Prototype" class="w-6 h-6">
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Tools & DevOps</h3>
+          <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">Utilizing Docker, Azure, Git, and Agile methodologies for streamlined development and CI/CD.</p>
+        </div>
+      
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+ <!-- Companies Section -->
+<section id="companies" class="py-20 dark:bg-slate-900 bg-gray-50">
+  <div class="container mx-auto px-6 md:px-20">
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <span data-aos="fade-up" data-aos-duration="500" class="px-4 py-1 border border-primary rounded-full text-primary text-sm inline-block font-medium">
+        Trusted By
+      </span>
+      
+      <h1 data-aos="fade-up" data-aos-duration="1000" class="text-3xl md:text-5xl font-extrabold mt-4 leading-tight text-gray-800 dark:text-white">
+        Companies I've <span class="text-primary">Worked With</span>
+      </h1>
+
+      <p data-aos="fade-up" data-aos-duration="1500" class="text-gray-600 dark:text-gray-300 mt-4 max-w-2xl mx-auto text-lg">
+        Proud to have collaborated with leading organizations and innovative startups
+      </p>
+    </div>
+
+    <!-- Companies Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      
+ 
+      <owl-carousel-o [options]="customOptions" class="col-span-7">
+ 
+<ng-template carouselSlide>
+  <div class="relative group overflow-hidden w-[300px] h-[300px] bg-white dark:bg-slate-800 p-2 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-700 hover:shadow-xl transition-all duration-300">
+
+    <!-- Company Image -->
+    <img src="/company/trianglz_logo.jfif" 
+         alt="Company Logo" 
+         class="w-full h-full object-cover rounded-xl">
+
+    <!-- Hover Overlay -->
+    <div class="text-center flex flex-col absolute inset-0 bg-black/60 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center rounded-xl">
+      <h3 class="text-white text-xl font-semibold tracking-wide transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+        TrianglZ LLC
+      </h3>
+      <p class="text-white text-sm font-medium transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+       Software Service Company
+      </p>
+    </div>
+
+  </div>
+</ng-template>
+<ng-template carouselSlide>
+  <div class="relative group overflow-hidden w-[300px] h-[300px] bg-white dark:bg-slate-800 p-2 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-700 hover:shadow-xl transition-all duration-300">
+
+    <!-- Company Image -->
+    <img src="/company/img mealify1 (1).png" 
+         alt="Company Logo" 
+         class="w-full h-full object-cover rounded-xl">
+
+    <!-- Hover Overlay -->
+    <div class="text-center flex flex-col absolute inset-0 bg-black/60 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center rounded-xl">
+      <h3 class="text-white text-xl font-semibold tracking-wide transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+        Spacetech
+      </h3>
+      <p class="text-white text-sm font-medium transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+       At SpaceTech, we bridge the gap between skills and solutions,
+        offering training programs, real internships, customized software,
+         and subscription-based products that drive success.
+      </p>
+    </div>
+
+  </div>
+</ng-template>
+<ng-template carouselSlide>
+  <div class="  relative group overflow-hidden w-[300px] h-[300px] bg-white dark:bg-slate-800 p-2 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-700 hover:shadow-xl transition-all duration-300">
+
+    <!-- Company Image -->
+    <img src="/company/1630652098478.jfif" 
+         alt="Company Logo" 
+         class="w-full h-full object-cover rounded-xl">
+
+    <!-- Hover Overlay -->
+    <div class="text-center flex flex-col  absolute inset-0 bg-black/60 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center rounded-xl">
+      <h3 class="text-white text-xl font-semibold tracking-wide transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+        X-Team
+      </h3>
+      <p class="text-white text-sm font-medium transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+        X-Team is a programming and marketing company specialized in programming courses, web development and digital marketing
+      </p>
+    </div>
+
+  </div>
+</ng-template>
+<ng-template carouselSlide>
+  <div class="relative group overflow-hidden w-[300px] h-[300px] bg-white dark:bg-slate-800 p-2 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-700 hover:shadow-xl transition-all duration-300">
+
+    <!-- Company Image -->
+    <img src="/company/flairstech_logo.jfif" 
+         alt="Company Logo" 
+         class="w-full h-full object-cover rounded-xl">
+
+    <!-- Hover Overlay -->
+    <div class="text-center flex flex-col   absolute inset-0 bg-black/60 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center rounded-xl">
+      <h3 class="text-white text-xl font-semibold tracking-wide transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+        FlairsTech
+      </h3>
+      <p class="text-white text-sm font-medium transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+        Innovation | Talent | Excellence @ FlairsTech.com 
+      </p>
+    </div>
+
+  </div>
+</ng-template>
+<ng-template carouselSlide>
+  <div class="relative group overflow-hidden w-[300px] h-[300px] bg-white dark:bg-slate-800 p-2 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-700 hover:shadow-xl transition-all duration-300">
+
+    <!-- Company Image -->
+    <img src="/company/1631351788797.jfif" 
+         alt="Company Logo" 
+         class="w-full h-full object-cover rounded-xl">
+
+    <!-- Hover Overlay -->
+    <div class="absolute text-center flex flex-col inset-0 bg-black/60 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center rounded-xl">
+      <h3 class="text-white text-xl font-semibold tracking-wide transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+        Information Technology Institute (ITI)
+      </h3>
+      <p class="text-white text-sm font-medium transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+        ITI initially set up to provide specialised software development programs to fresh graduates.
+      </p>
+    </div>
+
+  </div>
+</ng-template>
+
+
+ 
+ 
+ 
+</owl-carousel-o>
+     
+    </div> 
+
+  
+  </div>
+</section> 
+
+<section id="Portfolio" class="pt-20 dark:bg-slate-900 bg-gray-50" >
+  <div class="container mx-auto px-6 md:px-20">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+      
+      <!-- Left Content -->
+      <div class="space-y-6 md:col-span-5 col-span-6 md:text-left text-center ">
+        <span data-aos="fade-right" data-aos-duration="500" class="px-4 py-1 border border-primary rounded-full text-primary text-sm inline-block font-medium">
+          Portfolio
+        </span>
+        
+        <h1 data-aos="fade-right" data-aos-duration="1000" class="text-3xl md:text-4xl font-extrabold leading-tight text-gray-800 dark:text-white">
+        My Creative Works
+        Latest <span class="text-primary">Projects</span>
+        </h1>
+
+        <p data-aos="fade-right" data-aos-duration="1500" class="text-gray-600 dark:text-gray-300 leading-relaxed text-lg">
+          I have selected and mentioned here some of my latest projects to share with you.
+        </p>
+
+        <button data-aos="fade-right" data-aos-duration="2000" class="bg-primary text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors  hover:bg-gray-950 duration-300 font-medium cursor-pointer shadow-lg shadow-blue-500/30">
+          Show More
+        </button>
+      </div>
+      <!-- light content -->
+ <owl-carousel-o [options]="customOptions" class="col-span-7">
+  <ng-template carouselSlide>
+    <div class=" w-[300px] h-[200px]  bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-700 hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+      <img src="/slider/img mealify1.svg" alt="slide">
+    </div>
+  </ng-template>
+  <ng-template carouselSlide>
+    <div class=" w-[300px] h-[200px]  bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-700 hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+      <img src="/slider/img mealify4.png" alt="slide">
+    </div>
+  </ng-template>
+  <ng-template carouselSlide>
+    <div class=" w-[300px] h-[200px]  bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-700 hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+      <img src="/slider/img mealify3.svg" alt="slide">
+    </div>
+  </ng-template>
+
+  <ng-template carouselSlide>
+    <div class=" w-[300px] h-[200px]  bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-700 hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+      <img src="/slider/img mealify6.avif" alt="slide">
+    </div>
+  </ng-template>
+  <ng-template carouselSlide>
+    <div class=" w-[300px] h-[200px]  bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-700 hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+      <img src="/slider/img mealify8.avif" alt="slide">
+    </div>
+  </ng-template>
+  <ng-template carouselSlide>
+    <div class=" w-[300px] h-[200px]  bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-700 hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+      <img src="/slider/img mealify9.avif" alt="slide">
+    </div>
+  </ng-template>
+
+  <ng-template carouselSlide>
+    <div class=" w-[300px] h-[200px]  bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-700 hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+      <img src="/slider/img mealify7.avif" alt="slide">
+    </div>
+  </ng-template>
+
+
+ 
+ 
+</owl-carousel-o>
+      </div>
+    </div>
+
+
+
+</section>
+
+<section   id="review"  class="py-20 dark:bg-slate-900 bg-gray-50">
+      <div class="container mx-auto px-6 md:px-20">
+        <div class="text-center mb-12">
+            <span data-aos="fade-right" data-aos-duration="500" class="px-4 py-1 border border-primary rounded-full text-primary text-sm inline-block font-medium">
+              Video Review
+            </span>
+            <h1 data-aos="fade-right" data-aos-duration="1000" class="text-3xl md:text-4xl font-extrabold mt-4 leading-tight text-gray-800 dark:text-white">
+              Watch My <span class="text-primary">Creative Work</span>
+            </h1>
+            <p data-aos="fade-right" data-aos-duration="1500" class="text-gray-600 dark:text-gray-300 mt-4 max-w-2xl mx-auto text-lg">
+                See how I bring ideas to life through code and design.
+            </p>
+        </div>
+    
+        <!-- Creative Wrapper -->
+        <div data-aos="zoom-in-up" data-aos-duration="500" class="relative w-full max-w-4xl mx-auto group">
+            <!-- Animated Glow Background -->
+            <div class="absolute -inset-2 bg-gradient-to-r from-cyan-500 via-primary to-purple-500 rounded-[2rem] blur-2xl opacity-20 group-hover:opacity-50 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
+            
+            <!-- Browser Window Mockup -->
+            <div class="relative bg-slate-900 rounded-2xl overflow-hidden border border-slate-700 shadow-2xl ring-1 ring-white/10 transform transition-all duration-500 hover:-translate-y-1">
+                <!-- Header Bar -->
+                <div class="h-10 bg-slate-800/80 backdrop-blur-md border-b border-white/5 flex items-center px-4 justify-between z-20 absolute top-0 w-full">
+                    <div class="flex space-x-2">
+                        <div class="w-3 h-3 rounded-full bg-red-500/80 hover:bg-red-500 transition-colors shadow-inner animate-bounce [animation-delay:0ms]"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500/80 hover:bg-yellow-500 transition-colors shadow-inner animate-bounce [animation-delay:150ms]"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500/80 hover:bg-green-500 transition-colors shadow-inner animate-bounce [animation-delay:300ms]"></div>
+                    </div>
+                    
+                    <div class="w-10"></div> <!-- Spacer for balance -->
+                </div>
+
+                <!-- Video Container -->
+                <div  class="w-full bg-black pt-10"> <!-- pt-10 to account for specific header height -->
+                    <video 
+                        class="w-full h-auto max-h-[80vh] mx-auto shadow-inner"
+                        controls
+                        playsinline
+                        preload="metadata">
+                        <source src="/view/WhatsApp Video 2025-12-07 at 3.05.18 PM.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <!-- Reflection/Gloss Effect (Bottom) -->
+            <div class="absolute -bottom-4 left-4 right-4 h-4 bg-black/20 blur-xl rounded-[100%]"></div>
+        </div>
+      </div>
+    </section>
+
+<section class="pt-20 dark:bg-slate-900 bg-gray-50" >
+  <div class="container mx-auto px-6 md:px-20">
+    <div class="grid grid-cols-1   items-center text-center ">
+      
+      <!-- Left Content -->
+      <div class="space-y-6  col-span-5">
+        <span data-aos="fade-right" data-aos-duration="500" class="px-4 py-1 border border-primary rounded-full text-primary text-sm inline-block font-medium">
+          Reviews
+        </span>
+        
+        <h1 data-aos="fade-right" data-aos-duration="1000" class="text-3xl md:text-4xl font-extrabold leading-tight text-gray-800 dark:text-white">
+       Our Customer Say 
+Something  <span class="text-primary">About Us  </span>
+        </h1>
+
+        <p data-aos="fade-right" data-aos-duration="1500" class="text-gray-600 dark:text-gray-300 leading-relaxed text-lg">
+          I have selected and mentioned here some of my latest projects to share with you.
+        </p>
+
+        <button data-aos="fade-right" data-aos-duration="2000" class="bg-primary mb-7 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-300 font-medium cursor-pointer shadow-lg shadow-blue-500/30">
+          Show More
+        </button>
+      </div>
+      </div>
+
+ <owl-carousel-o [options]="customOptions" class="owl-theme">
+
+      <!-- === Slide === -->
+      
+      <ng-template carouselSlide>
+        <div class="bg-white dark:bg-slate-800 rounded-2xl border-1 border-gray-100 p-4 sm:p-6 w-full max-w-2xl mx-auto h-full flex flex-col justify-between">
+
+          <!-- Stars -->
+          <div class="flex items-center gap-1 mb-3">
+            <div class="flex text-yellow-500 text-sm sm:text-base">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <span class="font-semibold text-gray-700 dark:text-gray-200 text-sm sm:text-base">5.0</span>
+          </div>
+
+          <!-- Content -->
+          <div class="content mb-4">
+            
+            <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-xs sm:text-sm line-clamp-[8] overflow-hidden text-ellipsis">
+              We thank you for your efforts with us during the course period.
+And you never hesitated to help any of us with any information, whether it was in the field in general or specifically related to the course.
+May God bless your patience with us.Thank you so much, Engineer, for your effort with us and your sincerity in explaining and delivering the information.
+May God bless you and reward you with all good.
+            </p>
+          </div>
+
+          <!-- Footer -->
+          <div class="footer flex gap-3">
+           
+            <div>
+              <span class="block font-semibold text-gray-800 dark:text-gray-100 text-sm sm:text-base">dodo </span>
+              <div class="flex text-gray-500 dark:text-gray-400 text-xs sm:text-sm gap-1">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>frontend developer   </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="bg-white dark:bg-slate-800 border-1 border-gray-100 rounded-2xl p-4 sm:p-6 w-full max-w-2xl mx-auto h-full flex flex-col justify-between">
+
+          <!-- Stars -->
+          <div class="flex items-center gap-1 mb-3">
+            <div class="flex text-yellow-500 text-sm sm:text-base">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <span class="font-semibold text-gray-700 dark:text-gray-200 text-sm sm:text-base">5.0</span>
+          </div>
+
+          <!-- Content -->
+          <div class="content mb-4">
+            
+            <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-xs sm:text-sm line-clamp-[8] overflow-hidden text-ellipsis">
+     You don’t need any confirmation or evaluation from us, Engineer.
+We truly benefit a lot from you, and your teaching style is always enjoyable, even if it’s the last session.
+We will definitely miss you, Engineer, and most people were really happy when they got to know you.
+We will continue with you to the Advanced level, God willing.
+May God bless you and grant you success always.
+            </p>
+          </div>
+
+          <!-- Footer -->
+          <div class="footer flex gap-3">
+           
+            <div>
+              <span class="block font-semibold text-gray-800 dark:text-gray-100 text-sm sm:text-base">Fatma Mostafa </span>
+              <div class="flex text-gray-500 dark:text-gray-400 text-xs sm:text-sm gap-1">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>frontend developer   </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="bg-white dark:bg-slate-800 border-1 border-gray-100 rounded-2xl p-4 sm:p-6 w-full max-w-2xl mx-auto h-full flex flex-col justify-between">
+
+          <!-- Stars -->
+          <div class="flex items-center gap-1 mb-3">
+            <div class="flex text-yellow-500 text-sm sm:text-base">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <span class="font-semibold text-gray-700 dark:text-gray-200 text-sm sm:text-base">5.0</span>
+          </div>
+
+          <!-- Content -->
+          <div class="content mb-4">
+            
+            <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-xs sm:text-sm line-clamp-[8] overflow-hidden text-ellipsis">
+             Engineer Ahmed, we thank you for your efforts with us during the course period.
+            You never hesitated to help any of us with any information, whether it was in the field in general or specifically related to the course.
+            Your patience with us is truly appreciated.
+            We understand the course content very well because of you.
+            May God bless you and reward you for all the good you’ve done for us.
+            </p>
+          </div>
+
+          <!-- Footer -->
+          <div class="footer flex gap-3">
+           
+            <div>
+              <span class="block font-semibold text-gray-800 dark:text-gray-100 text-sm sm:text-base">zainap Mohamed </span>
+              <div class="flex text-gray-500 dark:text-gray-400 text-xs sm:text-sm gap-1">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>frontend developer   </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="bg-white dark:bg-slate-800 border-1 border-gray-100 rounded-2xl p-4 sm:p-6 w-full max-w-2xl mx-auto h-full flex flex-col justify-between">
+
+          <!-- Stars -->
+          <div class="flex items-center gap-1 mb-3">
+            <div class="flex text-yellow-500 text-sm sm:text-base">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <span class="font-semibold text-gray-700 dark:text-gray-200 text-sm sm:text-base">5.0</span>
+          </div>
+
+          <!-- Content -->
+          <div class="content mb-4">
+            
+            <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-xs sm:text-sm line-clamp-[8] overflow-hidden text-ellipsis">
+          May God bless you, engineer. Honestly, this is not just talk — God knows I truly mean it.
+  I’ve seen how people speak about you and praise you everywhere, even back when I was still at ITI in Damanhour during the training.
+They always said there is no one who explains like you.
+This is the truth, not just words.
+God willing, I’ll get to see you always in good situations.
+            </p>
+          </div>
+
+          <!-- Footer -->
+          <div class="footer flex gap-3">
+           
+            <div>
+              <span class="block font-semibold text-gray-800 dark:text-gray-100 text-sm sm:text-base"> Alaa Mohamed </span>
+              <div class="flex text-gray-500 dark:text-gray-400 text-xs sm:text-sm gap-1">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>frontend developer   </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="bg-white dark:bg-slate-800  border-1 border-gray-100 rounded-2xl p-4 sm:p-6 w-full max-w-2xl mx-auto h-full flex flex-col justify-between">
+
+          <!-- Stars -->
+          <div class="flex items-center gap-1 mb-3">
+            <div class="flex text-yellow-500 text-sm sm:text-base">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <span class="font-semibold text-gray-700 dark:text-gray-200 text-sm sm:text-base">5.0</span>
+          </div>
+
+          <!-- Content -->
+          <div class="content mb-4">
+            
+            <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-xs sm:text-sm line-clamp-[8] overflow-hidden text-ellipsis">
+    Peace be upon you, Engineer.
+My results came out and I wanted to share my happiness with you.
+I got a GPA of 3.9 and ranked first, thank God. 
+I am truly so happy that I met you at the very beginning of my journey in this field.
+You are the reason I took strong steps forward.
+May God make you happy and grant you more success, and may you always be a reason for goodness in people’s lives.
+            </p>
+          </div>
+
+          <!-- Footer -->
+          <div class="footer flex gap-3">
+           
+            <div>
+              <span class="block font-semibold text-gray-800 dark:text-gray-100 text-sm sm:text-base"> Rasha Farouk  </span>
+              <div class="flex text-gray-500 dark:text-gray-400 text-xs sm:text-sm gap-1">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>frontend developer   </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </ng-template>
+
+    
+      <ng-template carouselSlide>
+        <div class="bg-white dark:bg-slate-800  border-1 border-gray-100 rounded-2xl p-4 sm:p-6 w-full max-w-2xl mx-auto h-full flex flex-col justify-between">
+
+          <!-- Stars -->
+          <div class="flex items-center gap-1 mb-3">
+            <div class="flex text-yellow-500 text-sm sm:text-base">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <span class="font-semibold text-gray-700 dark:text-gray-200 text-sm sm:text-base">5.0</span>
+          </div>
+
+          <!-- Content -->
+          <div class="content mb-4">
+            
+            <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-xs sm:text-sm line-clamp-[8] overflow-hidden text-ellipsis">
+Regarding this story, I was just yesterday at training, and I swear I told them that I took a course with a very skilled instructor who was extremely keen on teaching us and giving us all the information he had.
+Even though I had already taken JS before, I still gained so much knowledge with you—there was a huge difference.
+Your explanation is truly amazing, Engineer, and I still say that sincerely.
+I keep praying for you—may God honor you and make you a source of benefit for others always.
+            </p>
+          </div>
+
+          <!-- Footer -->
+          <div class="footer flex gap-3">
+           
+            <div>
+              <span class="block font-semibold text-gray-800 dark:text-gray-100 text-sm sm:text-base"> Rana Elmallah  </span>
+              <div class="flex text-gray-500 dark:text-gray-400 text-xs sm:text-sm gap-1">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span> Back-end developer   </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="bg-white dark:bg-slate-800  border-1 border-gray-100 rounded-2xl p-4 sm:p-6 w-full max-w-2xl mx-auto h-full flex flex-col justify-between">
+
+          <!-- Stars -->
+          <div class="flex items-center gap-1 mb-3">
+            <div class="flex text-yellow-500 text-sm sm:text-base">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <span class="font-semibold text-gray-700 dark:text-gray-200 text-sm sm:text-base">5.0</span>
+          </div>
+
+          <!-- Content -->
+          <div class="content mb-4">
+            
+            <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-xs sm:text-sm line-clamp-[8] overflow-hidden text-ellipsis">
+Thank God, the results just came out a little while ago—by God’s grace I got a 3.8 GPA. 
+I really wanted to thank you for every piece of information you shared with us.
+You were the reason I improved so much—honestly, your explanation was exceptional.
+May God bless you and increase you in knowledge, and may He always make you a reason for goodness in people’s lives.
+            </p>
+          </div>
+
+          <!-- Footer -->
+          <div class="footer flex gap-3">
+           
+            <div>
+              <span class="block font-semibold text-gray-800 dark:text-gray-100 text-sm sm:text-base">Hager Elsayed  </span>
+              <div class="flex text-gray-500 dark:text-gray-400 text-xs sm:text-sm gap-1">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span> Back-end developer   </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="bg-white dark:bg-slate-800 border-1 border-gray-100 rounded-2xl p-4 sm:p-6 w-full max-w-2xl mx-auto h-full flex flex-col justify-between">
+
+          <!-- Stars -->
+          <div class="flex items-center gap-1 mb-3">
+            <div class="flex text-yellow-500 text-sm sm:text-base">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <span class="font-semibold text-gray-700 dark:text-gray-200 text-sm sm:text-base">5.0</span>
+          </div>
+
+          <!-- Content -->
+          <div class="content mb-4">
+            
+            <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-xs sm:text-sm line-clamp-[8] overflow-hidden text-ellipsis">
+             Salam Alaikum  how are you, Engineer? I'm reaching out to thank you so much for your efforts with us and for the level you have helped us achieve. I personally learned a lot from you, truly; it wasn't just some code or a track, I learned so much from you, honestly. So, thank you for your effort throughout this period, and we will definitely miss your explanations and your presence with us . 
+              Just one last thing: I apologize that this message is late, but I was honestly busy with the practical assignments for college .
+               So, thank you again and again.
+            </p>
+          </div>
+
+          <!-- Footer -->
+          <div class="footer flex gap-3">
+           
+            <div>
+              <span class="block font-semibold text-gray-800 dark:text-gray-100 text-sm sm:text-base">  Ahamed Mohamed </span>
+              <div class="flex text-gray-500 dark:text-gray-400 text-xs sm:text-sm gap-1">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span> Back-end developer   </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="bg-white dark:bg-slate-800 border-1 border-gray-100 rounded-2xl p-4 sm:p-6 w-full max-w-2xl mx-auto h-full flex flex-col justify-between">
+
+          <!-- Stars -->
+          <div class="flex items-center gap-1 mb-3">
+            <div class="flex text-yellow-500 text-sm sm:text-base">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <span class="font-semibold text-gray-700 dark:text-gray-200 text-sm sm:text-base">5.0</span>
+          </div>
+
+          <!-- Content -->
+          <div class="content mb-4">
+            
+            <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-xs sm:text-sm line-clamp-[8] overflow-hidden text-ellipsis">
+               "This is truly respectable work, guys (youth). Well done, honestly! You honored me greatly with the excellent projects and the discussion, and thank you for your immense effort over the past few days. The result... Thank you, Engineer, for your hard work and effort with us. Without you,
+                we really wouldn't have been able to produce something this respectable, honestly.
+            </p>
+          </div>
+
+          <!-- Footer -->
+          <div class="footer flex gap-3">
+           
+            <div>
+              <span class="block font-semibold text-gray-800 dark:text-gray-100 text-sm sm:text-base">  Ahmed Hosni </span>
+              <div class="flex text-gray-500 dark:text-gray-400 text-xs sm:text-sm gap-1">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span> Back-end developer   </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="bg-white dark:bg-slate-800 border-2 border-gray-100 rounded-2xl p-4 sm:p-6 w-full max-w-2xl mx-auto h-full flex flex-col justify-between">
+
+          <!-- Stars -->
+          <div class="flex items-center gap-1 mb-3">
+            <div class="flex text-yellow-500 text-sm sm:text-base">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <span class="font-semibold text-gray-700 dark:text-gray-200 text-sm sm:text-base">5.0</span>
+          </div>
+
+          <!-- Content -->
+          <div class="content mb-4">
+            
+            <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-xs sm:text-sm line-clamp-[8] overflow-hidden text-ellipsis">
+            This is truly impressive work, everyone. Well done, honestly! You’ve honored me with the quality of the projects and the thoughtful discussions. Thank you for the tremendous effort you’ve put in over the past few days — the outcome speaks for itself.
+
+And a special thanks to you, Engineer, for your dedication and support.
+Without your guidance, we genuinely wouldn’t have been able to achieve something this professional and outstanding.
+            </p>
+          </div>
+
+          <!-- Footer -->
+          <div class="footer flex gap-3">
+           
+            <div>
+              <span class="block font-semibold text-gray-800 dark:text-gray-100 text-sm sm:text-base">  Ahmed Mohamed </span>
+              <div class="flex text-gray-500 dark:text-gray-400 text-xs sm:text-sm gap-1">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span> Back-end developer   </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </ng-template>
+      
+  
+
+
+
+    </owl-carousel-o>
+
+      </div>
+      </section>
+
+   <section id="contact" class="pt-20 pb-20 dark:bg-slate-900  bg-gray-50" >
+    <div class="container mx-auto px-6 md:px-20">
+      <div class="grid grid-cols-1  gap-12 items-center">
+        
+        <!-- Left Content -->
+        <div class=" text-center ">
+          <span class="px-4 py-1 border border-primary rounded-full text-primary text-sm inline-block font-medium">
+            Contact
+          </span>
+          
+          <h1 class="text-3xl md:text-4xl font-extrabold leading-tight text-gray-800 dark:text-white">
+            Let’s Discuss Your
+          <span class="text-primary">Project</span>
+          </h1>
+
+          <p class="text-gray-600 leading-relaxed text-lg  dark:text-gray-300">
+            Let’s make something new, different and more meaningful or make thing more visual or conceptual
+          </p>
+
+          <button class="bg-primary text-white mt-2 px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-300 font-medium cursor-pointer shadow-lg shadow-blue-500/30">
+            Show More
+          </button>
+        </div>
+    
+<div class=" grid grid-cols-1 md:grid-cols-12 gap-2 items-center ">
+      <!-- Right Content -->
+        <div class="space-y-10 col-span-4">
+          
+          <!-- Phone -->
+          <div data-aos="zoom-in" data-aos-duration="500" class="flex items-center gap-6">
+            <div class="w-14 h-14 bg-primary rounded-lg flex items-center justify-center text-white text-xl shrink-0">
+               <i class="fas fa-phone"></i>
+            </div>
+           <div class="space-y-1">
+            <h1 class="text-xl font-bold text-gray-800 dark:text-white">Call Me</h1>
+            <p  (click)="makePhoneCall()" class="text-gray-600 dark:text-gray-300  cursor-pointer hover:text-primary transition-colors duration-300">201201670643</p>
+           </div>
+          </div>
+
+          <!-- Email -->
+          <div data-aos="zoom-in" data-aos-duration="1000" class="flex items-center gap-6">
+            <div class="w-14 h-14 bg-primary rounded-lg flex items-center justify-center text-white text-xl shrink-0">
+               <i class="fas fa-envelope"></i>
+            </div>
+           <div class="space-y-1">
+            <h1 class="text-xl font-bold text-gray-800 dark:text-white">Email me</h1>
+            <p (click)="sendEmail()" class="text-gray-600 dark:text-gray-300 cursor-pointer hover:text-primary transition-colors duration-300">ahmedhasanien1999@gmail.com</p>
+           </div>
+          </div>
+
+          <!-- Address -->
+          <div data-aos="zoom-in" data-aos-duration="1500" class="flex items-center gap-6">
+            <div class="w-14 h-14 bg-primary rounded-lg flex items-center justify-center text-white text-xl shrink-0">
+               <i class="fas fa-location-dot"></i>
+            </div>
+           <div class="space-y-1">
+            <h1 class="text-xl font-bold text-gray-800 dark:text-white">Address</h1>
+            <p class="text-gray-600 dark:text-gray-300 cursor-pointer hover:text-primary transition-colors duration-300">Cairo, Egypt</p>
+           </div>
+          </div>
+
+        </div>
+
+        <!-- Contact Form -->
+         <div data-aos="zoom-in" data-aos-duration="500"  class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-lg border border-gray-100 dark:border-slate-700 col-span-8">   
+          <form class="space-y-6" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="space-y-2">
+                <label class="text-sm font-medium text-gray-700 dark:text-gray-300">Name</label>
+                <input type="text" formControlName="name" placeholder="Full Name" class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-slate-700 dark:bg-slate-900 dark:text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" />
+              </div>
+              <div class="space-y-2">
+                <label class="text-sm font-medium text-gray-700 dark:text-gray-300">Email</label>
+                <input type="email" formControlName="email" placeholder="Email Address" class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-slate-700 dark:bg-slate-900 dark:text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" />
+              </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="space-y-2">
+                <label class="text-sm font-medium text-gray-700 dark:text-gray-300">Phone</label>
+                <input type="tel" formControlName="phone" placeholder="Phone Number" class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-slate-700 dark:bg-slate-900 dark:text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" />
+              </div>
+              <div class="space-y-2">
+                <label class="text-sm font-medium text-gray-700 dark:text-gray-300">Budget</label>
+                <input type="text" formControlName="budget" placeholder="Project Budget" class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-slate-700 dark:bg-slate-900 dark:text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" />
+              </div>
+            </div>
+
+            <div class="space-y-2">
+              <label class="text-sm font-medium text-gray-700 dark:text-gray-300">Message</label>
+              <textarea rows="4" formControlName="message" placeholder="Tell me about your project" class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-slate-700 dark:bg-slate-900 dark:text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none"></textarea>
+            </div>
+
+            <button type="submit" class=" cursor-pointer w-full bg-primary text-white py-4 rounded-lg hover:bg-gray-900 transition-colors duration-300 font-bold text-lg shadow-lg shadow-blue-500/30">
+              Send Message
+            </button>
+          </form>
+        </div> 
+
+      </div>
+    </div>
+    </div>
+
+  </section>
+

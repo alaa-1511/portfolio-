@@ -1,0 +1,73 @@
+
+
+
+
+
+<nav class=" fixed w-full z-20 top-0 start-0  border-b border-default  dark:border-gray-800 bg-gray-50 dark:bg-slate-900">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
+  <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+        
+        <span class="self-center text-primary text-2xl text-heading dark:text-white font-bold whitespace-nowrap">Portifolio</span>
+    </a>
+    <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-base md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary" aria-controls="navbar-default" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/></svg>
+    </button>
+    <div class="hidden w-full  grow md:flex md:w-auto" id="navbar-default">
+      <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium  md:space-x-4 rtl:space-x-reverse md:flex-row md:mt-4 md:ms-4 md:border-0 dark:bg-slate-900 md:dark:bg-transparent bg-gray-50">
+        <li>
+          <a href="#home" class=" nav-link " aria-current="page">Home</a>
+        </li>
+        <li>
+          
+          <a href="#Skills" class=" nav-link " aria-current="page">Skills</a>
+        </li>
+        <li>
+          <a href="#Portfolio" class=" nav-link " aria-current="page">Portfolio</a>
+        </li>
+        <li>
+          <a href="#review" class=" nav-link " aria-current="page">Review</a>
+        </li>
+        <li>
+          <a href="#contact" class=" nav-link " aria-current="page">Contact</a>
+        </li>
+          
+      </ul>
+      <ul class="font-medium   bg-gray-50 dark:bg-slate-900 ms-auto flex flex-row p-4 md:p-0 mt-0 md:flex-row md:space-x-2 rtl:space-x-reverse md:border-0 ">
+         <a href="/AhmedHassanien- SoftwareEngineer - CV (3).pdf" download="Ahmed_Hassanien_CV.pdf" class="text-primary bg-white dark:bg-slate-800 border border-primary hover:bg-primary dark:hover:bg-primary hover:text-white dark:text-white box-border  cursor-pointer focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-3 pt-3  pb-0 focus:outline-none transition-colors duration-300">Download CV</a>
+          <button
+  (click)="toggleTheme()"
+  class="w-12 h-12 flex items-center justify-center
+         rounded-full cursor-pointer
+         text-primary  transition-all duration-300"
+  aria-label="Toggle theme"
+>
+ 
+  <i
+    class="fa-solid fa-moon text-xl transition-all duration-300"
+    [class.opacity-0]="isDark()"
+    [class.scale-0]="isDark()"
+  ></i>
+
+  
+  <i
+    class="fa-solid fa-sun text-xl transition-all duration-300 absolute"
+    [class.opacity-0]="!isDark()"
+    [class.scale-0]="!isDark()"
+  ></i>
+</button> 
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
